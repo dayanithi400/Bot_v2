@@ -11,6 +11,5 @@
             "src": "/(.*)",
             "dest": "Bot_v2/wsgi.py"
         }
-    ],
-    "postbuild": "python manage.py collectstatic --noinput"
+    ]
 }
