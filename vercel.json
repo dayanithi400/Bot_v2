@@ -8,12 +8,9 @@
     ],
     "routes": [
         {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
             "src": "/(.*)",
             "dest": "Bot_v2/wsgi.py"
         }
-    ]
+    ],
+    "postbuild": "python manage.py collectstatic --noinput"
 }
