@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoalBot_V2   </title>
+    <link rel="stylesheet" href="{% static 'css/css.css' %}"> <!-- Link to external CSS -->
+    <style>
+      body {
+        background-image: url("{% static 'assets/coal.jpg' %}"); /* Path to the background image */
+        background-size: cover; /* Ensures the image covers the entire page */
+        background-repeat: no-repeat; /* Prevents repeating */
+        background-attachment: fixed; /* Fixes the background so it doesn't scroll */
+        background-position: center; /* Centers the background image */
+    }
+    </style>
+  </head>
+<body>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="{% static 'assets/Logo_bg.png' %}"
+      intent="WELCOME"
+      chat-title="coalBot"
+      agent-id="3a6c2e4c-92b4-4311-aa50-9be8af0bbcd8"
+      language-code="en">
+    </df-messenger>
+</body>
+</html>
