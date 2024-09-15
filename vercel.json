@@ -1,15 +1,17 @@
 {
     "builds": [
-        {
-            "src": "Bot_v2/wsgi.py",
-            "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-        }
+      {
+        "src": "Bot_v2/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "Bot_v2/wsgi.py"
-        }
-    ]
-}
+      {
+        "src": "/(.*)",
+        "dest": "Bot_v2/wsgi.py"
+      }
+    ],
+    "buildCommand": "python manage.py collectstatic --noinput"
+  }
+  
